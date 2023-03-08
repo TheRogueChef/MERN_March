@@ -7,23 +7,23 @@ function App() {
       <Person 
       lastName={'Doe'} 
       firstName={'Jane'} 
-      age={'45'} 
+      age={45} 
       hairColor={'Black'}  />
       <Person 
       lastName={'Smith'} 
       firstName={'John'} 
-      age={'88'} 
-      hairColor={'Brown'}  />
+      age={88} 
+      hairColor={'Brown'}   />
       <Person 
       lastName={'Fillmore'} 
       firstName={'Millard'} 
-      age={'50'} 
-      hairColor={'Brown'}  />
+      age={50} 
+      hairColor={'Brown'} />
       <Person 
       lastName={'Smith'} 
       firstName={'Maria'} 
-      age={'62'} 
-      hairColor={'Brown'}  />
+      age={62} 
+      hairColor={'Brown'} />
     </div>
   );
 }
