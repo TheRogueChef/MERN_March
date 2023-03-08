@@ -27,31 +27,30 @@
         Moving your mouse over this text will make it black, so you cannot read it!
     </p>
     <script>
-        document.getElementById("button").onclick = () => 
+        document.getElementById("button").onclick = () => {
             setBackgroundColorById("paragraph", "blue");
-        
-        document.getElementById("alert").onclick = () => 
+        }
+        document.getElementById("alert").onclick = () => {
             alert(document.getElementById("popup-input").value);
-        
-        document.getElementById("hover-this").onmouseover = () => 
+        }
+        document.getElementById("hover-this").onmouseover = () => {
             setBackgroundColorById("body", "red");
-        
-        document.getElementById("hover-this").onmouseout = () => 
+        }
+        document.getElementById("hover-this").onmouseout = () => {
             setBackgroundColorById("body", "white");
-
-        document.getElementById("set-color").onclick = () =>
-            setBackgroundColorById(id, color)
-        
-        getValueFromId(id) => 
+        }
+        document.getElementById("set-color").onclick = () => {
+            color('set color', document.getElementById("color-input").value);
+        }
+        let getValueFromId = (id) => {
             return document.getElementById(id).value;
-        
-        setBackgroundColorById(id, color) => 
+        }
+        let setBackgroundColorById = (id, color) => {
             document.getElementById(id).style = "background-color: " + color;
-        
-        mouseOverFunction(el) => 
+        }
+        let mouseOverFunction = (el) => {
             el.style = "background-color: black";
-        
+        }
     </script>
 </body>
 </html>
-
