@@ -12,6 +12,7 @@ const ProductForm = (props) => {
         description: '',
     })
     
+    
     const handleInputChange = (e) => {
         console.log(e.target.name);
         console.log(e.target.value);
@@ -23,7 +24,7 @@ const ProductForm = (props) => {
         axios.post('http://localhost:8000/api/newProduct', product)
         .then((res) => {
             setAllProducts([...allProducts, res.data])
-            navigate('/')
+            navigate('/home')
         })
         .catch((err) => {
             console.log(err);

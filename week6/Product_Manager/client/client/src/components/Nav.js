@@ -6,7 +6,7 @@ const Nav = (props) => {
         <div className='d-flex justify-content-evenly align-items-center'>
             <h1>Product Manager</h1>
             <Link to={'/newProduct/form'}>Create a new Product</Link>
-            <Link to={'/'}>Home</Link>
+            <Link to={'/home'}>Home</Link>
         </div>
     )
 }
