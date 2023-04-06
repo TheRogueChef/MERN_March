@@ -12,6 +12,15 @@ allProducts: (req, res) => {
         })
 },
 
+oneProduct: (req, res) => {
+    Product.findOne({_id: req.params.id})
+        .then((product) => {
+            res.json(product)
+        })
+        .catch((err) => {res.status(500).json({message: 'Something went wrong', error:err})
+        })
+},
+
 createProduct: (req, res) => {
     Product.create(req.body)
         .then((newProduct) => {res.json(newProduct)
@@ -33,7 +42,7 @@ deleteProduct: (req, res) => {
         })
         .catch((err) => {res.status(500).json({message: 'Something went wrong', error:err})
         })
-}
+},
 
 
 }
