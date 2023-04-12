@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 
 const OneProduct = (props) => {
+    const navigate = useNavigate();
     const {id} = useParams();
     const [product, setProduct] = useState({})
     
@@ -11,20 +12,28 @@ const OneProduct = (props) => {
     useEffect(() => {
         axios.get("http://localhost:8000/api/oneProduct/"+id)
             .then((res) => {
-                console.log(res.data);
-                setProduct(res.data);
+                setProduct(res.data)
             })
             .catch((err) => {  
                 console.log(err);
             })
     }, [])
 
+    const deleteProduct = (productId) => {
+        axios.delete('http://localhost:8000/api/allProducts/' + productId)
+        .then(res => {
+            navigate('/home')
+        })
+        .catch(err => console.log(err))
+    };
+
 
     return (
         <div>
-            <p>Title: {product.title}</p>
-            <p>Price: {product.price}</p>
+            <h2>Title: {product.title}</h2>
+            <h3>Price: {product.price}</h3>
             <p>Description: {product.description}</p>
+            <button onClick={(e)=>{deleteProduct(product._id)}} className='btn btn-danger'>Delete</button>
         </div>
     )}
 

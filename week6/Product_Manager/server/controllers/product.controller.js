@@ -29,7 +29,7 @@ createProduct: (req, res) => {
         })
 },
 updateProduct: (req, res) => {
-    Product.findOneAndUpdate({_id: req.params.id}, req.body)
+    Product.findOneAndUpdate({_id: req.params.id}, req.body, {new:true})
         .then((updatedProduct) => {res.json(updatedProduct)
         })
         .catch((err) => {res.status(500).json({message: 'Something went wrong', error:err})
@@ -37,8 +37,8 @@ updateProduct: (req, res) => {
 },
 deleteProduct: (req, res) => {
     Product.deleteOne({_id: req.params.id})
-        .then((response) => {
-            res.json(response)
+        .then((deleteConfirmation) => {
+            res.json(deleteConfirmation)
         })
         .catch((err) => {res.status(500).json({message: 'Something went wrong', error:err})
         })
