@@ -34,7 +34,7 @@ const Update = (props) => {
             .catch(err => console.log(err))
     }
     return(
-        <div>
+        <div className='m-5 border border-dark rounded w-50 h-100 d-inline-block p-3 mb-2 bg-primary text-white w-25'>
             <h1>Update Product</h1>
             <form onSubmit={updateProduct}>
                 <p>
@@ -58,7 +58,7 @@ const Update = (props) => {
                     value={description}
                     onChange={(e) => { setDescription(e.target.value) }} /> 
                 </p>
-                <input type='submit'/>
+                <input className='btn btn-success' type='submit'/>
             </form>
         </div>
     )

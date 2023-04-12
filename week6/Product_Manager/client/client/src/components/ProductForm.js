@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ProductForm = (props) => {
     const [product, setProduct] = useState({
@@ -28,7 +29,8 @@ const ProductForm = (props) => {
 
 
     return (
-        <div className='d-flex justify-content-center'>
+        <div className='p-3 mb-2 bg-info text-white d-flex justify-content-center'>
+        <div className='m-5 border border-dark rounded h-75 d-inline-block p-3 mb-2 bg-primary text-white w-25 d-flex justify-content-center'>
             <form className='w-25' onSubmit={submitHandler}>
                 <h3>Create a New Product</h3>
                 <label className='form-label'>Title: </label>
@@ -39,8 +41,10 @@ const ProductForm = (props) => {
 
                 <label className='form-label'>Description: </label>
                 <input className='form-control' type="text" onChange={handleInputChange} value={product.description} name='description' />
-                <button className='btn btn-primary' >Create</button>
+                <br/>
+                <button className='btn btn-success' >Create</button>
             </form>
+        </div>
         </div>
     )
 }

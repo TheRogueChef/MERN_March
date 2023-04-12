@@ -29,7 +29,7 @@ const OneProduct = (props) => {
 
 
     return (
-        <div>
+        <div className='m-5 border border-dark rounded w-50 h-100 d-inline-block p-3 mb-2 bg-primary text-white w-25'>
             <h2>Title: {product.title}</h2>
             <h3>Price: {product.price}</h3>
             <p>Description: {product.description}</p>

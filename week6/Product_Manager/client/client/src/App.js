@@ -5,6 +5,7 @@ import React, { useState } from 'react';
 import Nav from './components/Nav';
 import OneProduct from './components/OneProduct';
 import UpdateProduct from './components/UpdateProduct';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 function App() {

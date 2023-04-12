@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 
 const Nav = (props) => {
     return (
-        <div className='d-flex justify-content-evenly align-items-center mb-5 p-3 border-bottom'>
+        <div className='p-3 mb-2 bg-primary text-white d-flex justify-content-evenly align-items-center mb-5 p-3 border-bottom'>
             <h1>Product Manager</h1>
-            <Link to={'/home'}>Home</Link>
+            <Link className='btn btn-success' to={'/home'}>Home</Link>
         </div>
     )
 }
