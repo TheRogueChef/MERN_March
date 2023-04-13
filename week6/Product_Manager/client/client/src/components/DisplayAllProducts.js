@@ -32,6 +32,7 @@ const DisplayAllProducts = (props) => {
 
     return (
         <div className='p-3 mb-2 bg-info text-white'>
+            <h1 className='text-dark'>Check out these products!</h1>
             {
                 product.map((product, index) => {
                     return (
